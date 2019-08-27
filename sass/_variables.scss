@@ -1,0 +1,23 @@
+//fonts
+$font1: 'Open Sans',
+sans-serif;
+$fa: 'FontAwesome';
+
+
+//colors
+$bgColor: #222;
+$bgColor2: #333;
+$fontColor: #fff;
+$whiteColor: #fff;
+$linkColor: #d87a00; /*#3200d8*/
+$hoverColor: #a05b00; /*#2700a7*/
+$grayBackGrd: #c4b6a5; /*#626262*/
+
+//mixins
+@mixin transition($type: all, $duration:0.3s, $ease:ease-out) {
+  -webkit-transition: $type $duration $ease;
+  -moz-transition: $type $duration $ease;
+  -o-transition: $type $duration $ease;
+  transition: $type $duration $ease;
+}
+
