@@ -170,7 +170,7 @@ var rows = document.querySelectorAll('#movies .movie');
 function loadMovies(e) {
 // formAddMovie.addEventListener('submit', function (e) {
   e.preventDefault();
-  var newTitle = "Test Movie";
+  var newTitle = "New Movie";
 
   var li = document.createElement('li');
   li.setAttribute('class', 'movie');
@@ -191,16 +191,21 @@ function loadMovies(e) {
   li.appendChild(newDeleteBtn);
   moviesList.appendChild(li);
   addDnDHandlers(li);
-
+  // alert("Movie loaded !");
 //  document.getElementById('add').value = "";
 }
 
-// var moviesList = document.querySelector('.movies');
-document.addEventListener('change', loadMovies);
+// document.addEventListener('click', loadMovies);
+document.addEventListener('click', function (e) {  
+  if (e.target.classList.contains('loadmovie')) {    
+    loadMovies(e);
+  } 
+  var teste = document.getElementById('loadmovie').value;
+});
 
-moviesList.addEventListener('click', function (e) {
+;
   if (e.target.classList.contains('loadmovie')) {
     // removeItem(e.target.parentElement);
+    alert("Hello alert 1 !", teste);
     loadMovies(e);
   }
-});
